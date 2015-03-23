@@ -1,0 +1,17 @@
+							<div class="apartado">
+							<div class="cuadro" align="center"><b>General Statistics for Debian 2.0 (Hamm)</b></div>
+							</div>		
+							<div class="apartado">
+							<div class="cuadro"><div id = "macro-hamm" class="macro"><b>Macrostatistics</b></div></div>
+								<div id = "tablamacrohamm"></div>
+								</div>
+							</div>	
+							<div class="apartado">
+							<div class="cuadro"><div id = "tablastat-hamm" class="tablastat"><b>Statistics by programming languages</b></div></div>
+								<div id = "tablahamm"></div>
+								</div>
+							<div class="apartado">
+							<div class="cuadro"><div id ="cocomo-hamm" class="cocomo"><b>Estimations done with Basic COCOMO model (also known as COCOMO I)</b></div></div>
+								<div id = "tablacocomohamm"></div>
+								</div>
+							</div>

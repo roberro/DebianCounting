@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="/estatico/css/debian.css" title="style" />
+	  <link rel="stylesheet" href="/estatico/css/custom-theme/jquery-ui-1.10.4.custom.min.css" />
+
+    <script src="/estatico/js/jquery-1.9.1.min.js"></script>
+    <script src="/estatico/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="/estatico/js/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="/estatico/js/debian.js"></script>
+    <script type="text/javascript" src="/estatico/js/graphs.js"></script>
+    <script type="text/javascript" src="/estatico/js/statistic.js"></script>
+   <title>Debian Counting</title>
+	</head>
+  <body>
+		<div id="Index">Index</div>
+    <div class= "cabecerasup"><b><a href="http://www.libresoft.es/">Libre Software Engineering</a></b></div>
+
+    <header class="cabecera" >Debian Counting</header>
+
+		<div id = "cargando"></div>
+			
+		<div id="Principal">
+			<p>Papers on Debian published: </p>
+			<p>
+				<a href="http://gsyc.es/~jjamor/research/papers/2005-debconf-amor-barahona-robles-herraiz.pdf">From Pigs to Stripes: A Travel throuth Debian GNU/Linux</a>
+			</p>
+			<p>
+			<a href="http://gsyc.escet.urjc.es/~jjamor/research/magazines/2005-upgrade-amor-barahona-robles-herraiz.pdf">Measuring Libre Software using Debian 3.1 (Sarge) as a Case Study: preliminary results</a>(published in
+			<a href="http://www.upgrade-cepis.org/">UPGRADE magazine</a>)
+			</p>
+			<p>
+			<a href="http://gsyc.escet.urjc.es/~jjamor/research/papers/RoSaC-2005-10.pdf">Measuring Woody: the Size of Debian 3.0</a>(a GSyC
+			<a href="http://gsyc.escet.urjc.es/tr">Report on Systems and Communications</a>)
+			</p>
+			<p>
+			<a href="http://www.springerlink.com/content/c516h8t6l16251l5/?p=ec540333df2b4b38a6aff2d8f6990e2f">Macro-level software evolution: a case study of a large software compilation (published in Empirical Software Engineering)</a>
+			</p>
+			<p>Comments and suggestions will be appreciated. Send them to Juanjo at jjamor(at)gsyc.escet.urjc.es or Gregorio at grex(at)gsyc.escet.urjc.es. </p>
+			<p>  </p>
+			<p>
+			Find more results and investigations performed on libre software on
+			<a href="http://libresoft.es">Libre Software Engineering</a>
+			site at the
+			<a href="http://www.urjc.es/">Universidad Rey Juan Carlos</a>
+			.
+			</p>
+		</div>
+
+		<div id="menu">
+    	<div id="search">
+    		<div id="search_busq">Package search:</div> 
+    		<div class="ui-widget">
+				<input id="search_pack" >
+			</div>
+		</div>
+
+		<div id="accordion">
+				<h3>Debian 2.0 (Hamm)</h3>
+				<div>
+					<p>
+					<dl>
+					<dt><a id="indexhamm">Index</a></dt>
+					<dt><a id="abouthamm">About</a></dt>
+					<dt><a id="statics_hamm">Statistics</a></dt>
+					<dt><a id= "packages_hamm">Packages</a></dt>
+					<dt><a id= "graphs_hamm">Graphs</a></dt>
+					<dt><a id= "faqhamm">FAQ</a></dt>
+					<dt><a id= "creditshamm" class="creditsP">Credits</a></dt>
+					</dl>
+					</p>
+				</div>
+				<h3>Debian 2.1 (Slink)</h3>
+				<div>
+					<p>
+					 <dl>
+					 <dt><a id="indexslink">Index</a> </dt>
+					 <dt><a id="aboutslink">About</a> </dt>
+					 <dt><a id="statics_slink">Statistics</a> </dt>
+					 <dt><a id= "packages_slink">Packages</a> </dt>
+					 <dt><a id= "graphs_slink">Graphs</a> </dt>
+					 <dt><a id= "creditsslink" class="creditsP">Credits</a> </dt>
+					 </dl>
+					</p>
+				</div>
+				<h3>Debian 2.2 (Potato)</h3>
+				<div>
+					<p>
+					 <dl>
+					 <dt><a id="indexpotato">Index</a> </dt>
+					 <dt><a id="aboutpotato">About</a> </dt>
+					 <dt><a id="statics_potato">Statistics</a> </dt>
+					 <dt><a id= "packages_potato">Packages</a> </dt>
+					 <dt><a id= "graphs_potato">Graphs</a> </dt>
+					 <dt><a id= "creditspotato" class="creditsP">Credits</a> </dt>
+					 </dl>
+					</p>
+				</div>
+				<h3>Debian 3.0 (Woody)</h3>
+				<div>
+					<p>
+					 <dl>
+					 <dt><a id="indexwoody">Index</a> </dt>
+					 <dt><a id="aboutwoody">About</a> </dt>
+					 <dt><a id="statics_woody">Statistics</a> </dt>
+					 <dt><a id= "packages_woody">Packages</a> </dt>
+					 <dt><a id= "graphs_woody">Graphs</a> </dt>
+					 <dt><a id= "creditswoody" class="creditsP">Credits</a> </dt>
+					 </dl>
+					</p>
+				</div>
+				<h3>Debian 3.1 (Sarge)</h3>
+				<div>
+					<p>
+					 <dl>
+					 <dt><a id="indexsarge">Index</a> </dt>
+					 <dt><a id="aboutsarge">About</a> </dt>
+					 <dt><a id="statics_sarge">Statistics</a> </dt>
+					 <dt><a id= "packages_sarge">Packages</a> </dt>
+					 <dt><a id= "graphs_sarge">Graphs</a> </dt>
+					 <dt><a id= "creditssarge" class="creditsP">Credits</a> </dt>
+					 </dl>
+					</p>
+				</div>
+				<h3>Debian 4.0 (Etch)</h3>
+				<div>
+					<p>
+					 <dl>
+					 <dt><a id="indexetch">Index</a> </dt>
+					 <dt><a id="aboutetch">About</a> </dt>
+					 <dt><a id="statics_etch">Statistics</a> </dt>
+					 <dt><a id= "packages_etch">Packages</a> </dt>
+					 <dt><a id= "graphs_etch">Graphs</a> </dt>
+					 <dt><a id= "creditsetch" class="creditsP">Credits</a> </dt>
+					 </dl>
+					</p>
+				</div>
+				<h3>Debian 5.0 (Lenny)</h3>
+				<div>
+					<p>
+					 <dl>
+					 <dt><a id="indexlenny">Index</a> </dt>
+					 <dt><a id="aboutlenny">About</a> </dt>
+					 <dt><a id="statics_lenny">Statistics</a> </dt>
+					 <dt><a id= "packages_lenny">Packages</a> </dt>
+					 <dt><a id= "graphs_lenny">Graphs</a> </dt>
+					 <dt><a id= "creditslenny" class="creditsP">Credits</a> </dt>
+					 </dl>
+					</p>
+				</div>
+		</div>
+		</div>
+
+
+		<div id="dialog"></div>
+		<footer class="pie"></footer>
+		<div class="infoweb">
+		<div class="logogsyc"><a href="http://gsyc.escet.urjc.es/"><img width="80px" height="42px" src="http://gsyc.escet.urjc.es/~mortuno/gsyc.gif"></a></div>
+		<div class="infogsyc">© 2013-14 Grupo de Sistemas y Comunicaciones<br>Universidad Rey Juan Carlos<br>Fuenlabrada, Madrid, Spain<br></div>
+		</div>
+  </body>
+</html>

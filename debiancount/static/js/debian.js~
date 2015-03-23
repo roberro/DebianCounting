@@ -1,0 +1,352 @@
+ $(function() {
+		$( "#accordion" ).accordion({collapsible: true});
+		$( "#tabs" ).tabs();
+		$( "#hamm" ).tabs();
+		$( "#slink" ).tabs();
+		$( "#potato" ).tabs();
+		$( "#woody" ).tabs();
+		$( "#sarge" ).tabs();
+		$( "#etch" ).tabs();
+		$( "#lenny" ).tabs();
+
+});
+
+$(document).ready(function() {
+
+//Cargamos los paquetes con una llamada AJAX.
+function ajaxpacks(namepack){
+						var name = namepack.split("-");
+						var request = $.ajax({
+								type:'GET',
+								data:{"namepack":namepack},
+								beforeSend: function(){
+									$("#Principal").html("")
+									$("#Principal").addClass("loading");
+								},
+								success: function(json) {
+									paquetes(json,name[1]);
+								},
+								complete: function() {
+									$("#Principal").removeClass("loading");
+								},
+								url: "/paqueteshamm"
+						});
+		return request;
+}
+
+// Cargamos con AJAX las paginas alojadas en static/html
+			//Cargamos paginas index.
+			$("#index").click(function() {
+				$( "#Principal" ).load( "/estatico/html/index/index.html" );
+ 		  });
+			$("#indexhamm").click(function() {
+				$( "#Principal" ).load( "/estatico/html/index/indexhamm.html" );
+ 		  });
+			$("#indexslink").click(function() {
+				$( "#Principal" ).load( "/estatico/html/index/indexslink.html" );
+ 		  });
+			$("#indexpotato").click(function() {
+				$( "#Principal" ).load( "/estatico/html/index/indexpotato.html" );
+ 		  });
+			$("#indexwoody").click(function() {
+				$( "#Principal" ).load( "/estatico/html/index/indexwoody.html" );
+ 		  });
+			$("#indexsarge").click(function() {
+				$( "#Principal" ).load( "/estatico/html/index/indexsarge.html" );
+ 		  });
+			$("#indexetch").click(function() {
+				$( "#Principal" ).load( "/estatico/html/index/indexetch.html" );
+ 		  });
+			$("#indexlenny").click(function() {
+				$( "#Principal" ).load( "/estatico/html/index/indexlenny.html" );
+ 		  });
+
+			//Cargamos paginas about.
+			$("#abouthamm").click(function() {
+				$( "#Principal" ).load( "/estatico/html/about/abouthamm.html" );
+ 		  });
+			$("#aboutslink").click(function() {
+				$( "#Principal" ).load( "/estatico/html/about/aboutslink.html" );
+ 		  });
+			$("#aboutpotato").click(function() {
+				$( "#Principal" ).load( "/estatico/html/about/aboutpotato.html" );
+ 		  });
+			$("#aboutwoody").click(function() {
+				$( "#Principal" ).load( "/estatico/html/about/aboutwoody.html" );
+ 		  });
+			$("#aboutsarge").click(function() {
+				$( "#Principal" ).load( "/estatico/html/about/aboutsarge.html" );
+ 		  });
+			$("#aboutetch").click(function() {
+				$( "#Principal" ).load( "/estatico/html/about/aboutetch.html" );
+ 		  });
+			$("#aboutlenny").click(function() {
+				$( "#Principal" ).load( "/estatico/html/about/aboutlenny.html" );
+ 		  });
+
+
+			//Cargamos paginas packages.
+			$("#packages-hamm").click(function() {
+				//$( "#Principal" ).load( "/estatico/html/paquetes/paqueteshamm.html" );
+				var namepack = this.id;
+				requestpack = ajaxpacks(namepack);
+ 		  });
+			$("#packages-slink").click(function() {
+				//$( "#Principal" ).load( "/estatico/html/paquetes/paquetesslink.html" );
+				var namepack = this.id;
+				requestpack = ajaxpacks(namepack);
+ 		  });
+			$("#packages-potato").click(function() {
+				//$( "#Principal" ).load( "/estatico/html/paquetes/paquetespotato.html" );
+				var namepack = this.id;
+				requestpack = ajaxpacks(namepack);
+ 		  });
+			$("#packages-woody").click(function() {
+				//$( "#Principal" ).load( "/estatico/html/paquetes/paqueteswoody.html" );
+				var namepack = this.id;
+				requestpack = ajaxpacks(namepack);
+ 		  });
+			$("#packages-sarge").click(function() {
+				//$( "#Principal" ).load( "/estatico/html/paquetes/paquetessarge.html" );
+				var namepack = this.id;
+				requestpack = ajaxpacks(namepack);
+ 		  });
+			$("#packages-etch").click(function() {
+				//$( "#Principal" ).load( "/estatico/html/paquetes/paquetesetch.html" );
+				var namepack = this.id;
+				requestpack = ajaxpacks(namepack);
+ 		  });
+			$("#packages-lenny").click(function() {
+				//$( "#Principal" ).load( "/estatico/html/paquetes/paqueteslenny.html" );
+				var namepack = this.id;
+				requestpack = ajaxpacks(namepack);
+ 		  });
+
+			//Cargamos paginas graphs.
+			$("#graphshamm").click(function() {
+				$( "#Principal" ).load( "/estatico/html/graphs/graphshamm.html" );
+ 		  });
+			$("#graphsslink").click(function() {
+				$( "#Principal" ).load( "/estatico/html/graphs/graphsslink.html" );
+ 		  });
+			$("#graphspotato").click(function() {
+				$( "#Principal" ).load( "/estatico/html/graphs/graphspotato.html" );
+ 		  });
+			$("#graphswoody").click(function() {
+				$( "#Principal" ).load( "/estatico/html/graphs/graphswoody.html" );
+ 		  });
+			$("#graphssarge").click(function() {
+				$( "#Principal" ).load( "/estatico/html/graphs/graphssarge.html" );
+ 		  });
+			$("#graphsetch").click(function() {
+				$( "#Principal" ).load( "/estatico/html/graphs/graphsetch.html" );
+ 		  });
+			$("#graphslenny").click(function() {
+				$( "#Principal" ).load( "/estatico/html/graphs/graphslenny.html" );
+ 		  });
+
+			//Cargamos paginas FAQ.
+			$("#faqhamm").click(function() {
+				$( "#Principal" ).load( "/estatico/html/FAQhamm.html" );
+ 		  });
+
+			//Cargamos paginas credits.
+			$(".creditsP").click(function() {
+				$( "#Principal" ).load( "/estatico/html/credits.html" );
+ 		  });
+
+
+// Lista de paquetes
+function paquetes(json,nombre){
+	var sumasloc = 0;
+	var sumafiles = 0;
+	var sumaperson = 0;
+  var sumamonthst = 0;
+  var sumadev = 0;
+	var sumacoste = 0;
+	var totslocdivpack = 0;
+	var html = '<div class="apartado"><div class="tablas"><div id="packs-hamm" class="packs"><b>Packages</b></div></div><table align="center"><tbody><tr class="tablas"><td width="12%" align="center" valign="top">#</td><td width="12%" align="center" valign="top">Name</td><td width="12%" align="center" valign="top">Version</td><td width="12%" align="center" valign="top">SLOCs</td><td width="12%" align="center" valign="top">Files</td><td width="12%" align="center" valign="top">SLOCs/file</td><td width="12%" align="center" valign="top">Person - months</td><td width="12%" align="center" valign="top">Schedule (months)</td><td width="12%" align="center" valign="top">Avg. developers</td><td width="12%" align="center" valign="top">Cost Estimation</td></tr>';
+		json.sort(function (a, b){
+		    return (b.name - a.name)
+		})
+		for (i=0;i<json.length;i++){
+			var j = i+1;		
+			var cont = '<tr><td width="10%" align="center" valign="top"> ' + j +'</td>';
+			var name = '<td width="12%" id ="'+json[i].name +'-'+ nombre +'" class="packname" align="center" valign="top"> ' + json[i].name +'</td>';
+			var version = '<td width="12%" align="center" valign="top">'+ json[i].version +' </td>';
+			var slocs = '<td width="12%" align="center" valign="top">'+ json[i].slocs +'</td>';	
+			var sumasloc = sumasloc + json[i].slocs;
+			var files = '<td width="12%" id ="'+json[i].name +'-'+ nombre +'" class="packfiles" align="center" valign="top">'+ json[i].files +'</td>';
+			var sumafiles = sumafiles + json[i].files;
+			var slocdivpack = '<td width="12%" align="center" valign="top">'+ json[i].slocdivpack +'</td>';	
+			var personmonth = '<td width="12%" align="center" valign="top">'+ json[i].personmonth +'</td>';	
+			var sumaperson = sumaperson + json[i].personmonth;
+			var monthstim = '<td width="12%" align="center" valign="top">'+ json[i].monthstimate +'</td>';	
+			var sumamonthst = sumamonthst + json[i].monthstimate;
+			var developers = '<td width="12%" align="center" valign="top">'+ json[i].developers +'</td>';
+			var sumadev = sumadev + json[i].developers;
+			var coste = '<td width="12%" align="center" valign="top">'+ json[i].coste +'</td></tr>';
+			var sumacoste = sumacoste + json[i].coste;
+			var aux = cont + name + version + slocs + files + slocdivpack + personmonth + monthstim + developers + coste;
+			var html = html + aux;
+		}
+		var totslocdivpack = sumasloc / sumafiles;
+		var cont = '<tr><td width="10%" align="center" valign="top"></td>';
+		var name = '<td width="12%" align="center" valign="top"> Total </td>';
+		var version = '<td width="12%" align="center" valign="top"> </td>';
+		var slocs = '<td width="12%" align="center" valign="top">'+ sumasloc +'</td>';	
+		var files = '<td width="12%" align="center" valign="top">'+ sumafiles +'</td>';		
+		var slocdivpack = '<td width="12%" align="center" valign="top">'+ Math.round(totslocdivpack * 1000) / 1000 +'</td>';	
+		var personmonth = '<td width="12%" align="center" valign="top">'+ Math.round(sumaperson * 1000) / 1000 +'</td>';	
+		var monthstim = '<td width="12%" align="center" valign="top">'+ Math.round(sumamonthst * 1000) / 1000 +'</td>';	
+		var developers = '<td width="12%" align="center" valign="top">'+ Math.round(sumadev * 1000) / 1000 +'</td>';
+		var coste = '<td width="12%" align="center" valign="top">'+ sumacoste +'</td></tr>';
+		var aux = cont + name + version + slocs + files + slocdivpack + personmonth + monthstim + developers + coste;
+		var html = html + aux;
+		html = html + '</tbody></table><div id="dialog"></div></div>';
+
+    $("#Principal").html(html);
+}
+/*
+		$(document).on('click', '.packs', function(){ 
+				var namepack = this.id;
+				var name = namepack.split("-");
+				$("#pack"+name[1]).slideToggle("slow", function(){
+					if (requestpack.status != 200){$("#pack"+name[1]).addClass("loading");}
+				});
+		});
+
+*/
+//tablas de paquetes pinchando nombres.
+function packnombre(json,namepack,nombre){
+		var html = '<div class="apartado"><div class="tablas">Package '+ namepack +'</div><div><table width="98%" align="center"><tbody><tr class = "tablas"><td width="10%" align="center" valign="top">#</td><td width="15%" align="center" valign="top">Language</td><td width="15%" align="center" valign="top">SLOCs</td><td width="15%" align="center" valign="top">%SLOCs</td><td width="15%" align="center" valign="top">Files</td><td width="15%" align="center" valign="top">%Files</td><td width="15%" align="center" valign="top">SLOCs/Files</td></tr>';
+		var sumasloc= 0;var sumaporsloc= 0;var sumapack= 0;var sumaporpack= 0;var sumafiles= 0;var sumaporfiles= 0;var sumaslocdivfil = 0;
+		cocomo = json.pop();
+		json.sort(function (a, b){
+		    return (b.numsloc - a.numsloc)
+		})
+		for (i=0;i<json.length;i++){
+			var j = i+1;		
+			var cont = '<tr><td width="10%" align="center" valign="top"> ' + j +'</td>';
+			var leng = '<td width="15%" align="center" valign="top"> ' + json[i].lenguaje +'</td>';
+			var sloc = '<td width="15%" align="center" valign="top">'+ json[i].numsloc +' </td>';
+			var sumasloc = sumasloc + json[i].numsloc;
+			var porsloc = '<td width="15%" align="center" valign="top">'+ json[i].numporsloc +'%</td>';	
+			var sumaporsloc = sumaporsloc + json[i].numporsloc;
+			var files = '<td width="15%" align="center" valign="top">'+ json[i].numfiles +'</td>';	
+			var sumafiles = sumafiles + json[i].numfiles;
+			var porfiles = '<td width="15%" align="center" valign="top">'+ json[i].numporfiles +'%</td>';	
+			var sumaporfiles = sumaporfiles + json[i].numporfiles;
+			var sdivf = '<td width="15%" align="center" valign="top">'+ json[i].slocdivfil +'</td></tr>';
+			var aux = cont + leng + sloc + porsloc + files + porfiles + sdivf;
+			var html = html + aux;
+		}
+		var sumaslocdivfil = sumasloc / sumafiles;
+		var cont = '<tr><td width="10%" align="center" valign="top"> </td>';
+		var leng = '<td width="15%" align="center" valign="top"> Total </td>';
+		var sloc = '<td width="15%" align="center" valign="top">'+ sumasloc +' </td>';
+		var porsloc = '<td width="15%" align="center" valign="top">'+ sumaporsloc +'%</td>';	
+		var files = '<td width="15%" align="center" valign="top">'+ sumafiles +'</td>';	
+		var porfiles = '<td width="15%" align="center" valign="top">'+ sumaporfiles +'%</td>';	
+		var sdivf = '<td width="15%" align="center" valign="top">'+ Math.round(sumaslocdivfil * 1000) / 1000 +'</td></tr>';
+		var aux = cont + leng + sloc + porsloc + files + porfiles + sdivf;
+		var html = html + aux;
+	var com = '<tr><td class ="tablas" width="66%" valign="top">';
+	var medio = '</td><td class ="tablas" width="34%" valign="top">';
+	var final = '</td></tr>';	
+	var htmlaux = '<div class="apartado"><div class="tablas">Estimations done with Basic COCOMO model (also known as COCOMO I)</div><div><table align="center" width="98%"><tbody>'+ com + 'Total Physical Source Lines of Code (SLOC)'+ medio +cocomo.numsloc + final + com + 'Development Effort Estimate, Person-Years (Person-Months)' + medio + cocomo.personyear + '('+cocomo.personmonth+')'+final+ '<tr><td class ="tablas" colspan = "2" align="center" valign="top">(Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))</td></tr>' + com + 'Schedule Estimate, Years (Months)'+ medio + cocomo.yearstimate + '(' + cocomo.monthstimate +')'+ '<tr><td class ="tablas" colspan = "2" align="center" valign="top">(Basic COCOMO model, Months = 2.5 * (person-months**0.38))</td></tr>' + com + 'Estimated Average Number of Developers (Effort/Schedule)'+ medio + cocomo.developers+ final + com + 'Total Estimated Cost to Develop' + medio + cocomo.coste + '$'+ final + '<tr><td class ="tablas" colspan = "2" align="center" valign="top">(average salary = $56,286/year, overhead = 2.40))</td></tr><tr><td class ="tablas" colspan = "2" align="center" valign="top">(This numbers are computed as if it were a unique software project, not the union of independent projects) (It can be treated as the upper bound estimation. See FAQ for more details)</td></tr></tbody></table></div></div>';	
+	var html = html+ '</tbody></table></div></div>' + htmlaux
+ $("#dialog").html(html);
+	$("#dialog").dialog({
+			title: "Package: "+namepack,
+			autoOpen: false,
+			modal: true,
+			width: 900,
+			heigth: 600,
+
+	});
+	$("#dialog").dialog("open");
+}
+		$(document).on('click', '.packname', function(){ 
+				var namepack = this.id;
+				var name = namepack.split("-");
+						$.ajax({
+								type:'GET',
+								data:{"namepack":namepack},
+								beforeSend: function(){
+									$("#cargando").addClass("loading");
+								},
+								success: function(json) {
+									packnombre(json,name[0],name[1]);
+									
+								},
+								complete: function() {
+									$("#cargando").removeClass("loading");
+								},
+								url: "/tablapackname"
+						});
+		});
+
+
+//Tablas de paquetes pinchando files.
+function packfiles(json,namepack,nombre){
+	json.sort(function (a, b){
+	    return (b.numsloc - a.numsloc)
+	})
+  var sumasloc = 0;
+	var html = '<div class="apartado"><div class="tablas">Package: '+ namepack +'</div><div><table width="98%" align="center"><tbody><tr class="tablas"><td width="12%" align="center" valign="top">Rank</td><td width="12%" align="center" valign="top">Filename</td><td width="12%" align="center" valign="top">Language</td><td width="12%" align="center" valign="top">SLOCs</td></tr>';
+
+	for (i=0;i<json.length;i++){
+			var j = i+1;		
+			var cont = '<tr><td width="10%" align="center" valign="top"> ' + j +'</td>';
+			var name = '<td width="15%" align="center" valign="top"> ' + json[i].nombrefile +'</td>';
+			var leng = '<td width="15%" align="center" valign="top"> ' + json[i].lenguaje +'</td>';
+			var sloc = '<td width="15%" align="center" valign="top">'+ json[i].numsloc +' </td></tr>';
+			var sumasloc = sumasloc + json[i].numsloc
+			var html = html + cont + name + leng + sloc;
+	}
+	var cont = '<tr><td width="10%" align="center" valign="top"> </td>';
+	var name = '<td width="15%" align="center" valign="top"> Total </td>';
+	var leng = '<td width="15%" align="center" valign="top"> </td>';
+	var sloc = '<td width="15%" align="center" valign="top">'+ sumasloc +' </td></tr>';
+	var html = html + cont + name + leng + sloc;
+	var html = html + '</tbody></table></div></div>'
+	$("#dialog").html(html);
+	$("#dialog").dialog({
+			title: "Package: "+namepack,
+			autoOpen: false,
+			modal: true,
+			width: 900,
+			heigth: 600,
+			maxWidth: 900,
+		  maxHeight: 900,
+	});
+	$("#dialog").dialog("open");
+}
+		$(document).on('click', '.packfiles', function(){ 
+				var namepack = this.id;
+				var name = namepack.split("-");
+			
+						$.ajax({
+								type:'GET',
+								data:{"namepack":namepack},
+								beforeSend: function(){
+									$("#cargando").addClass("loading");
+								},
+								success: function(json) {
+									packfiles(json,name[0],name[1]);
+									
+								},
+								complete: function() {
+									$("#cargando").removeClass("loading");
+								},
+								url: "/tablapackfiles"
+						});
+
+			
+		});
+
+
+});
+
+

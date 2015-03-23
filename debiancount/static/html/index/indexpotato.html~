@@ -1,0 +1,33 @@
+<div class="apartado">
+							<div class="cuadro"><b>Welcome to the SLOCCount Web for Debian 2.0 (Potato)</b></div>
+</div>
+<div class="apartado">
+							<div class="cuadro"><b>Introduction to the SLOCCount Web for Debian 2.0 (Potato)</b></div>
+								<div>This site offers statistics and numbers gathered together by SLOCCount. SLOCCount counts the number of source lines of code (by definition a line ending in a newline or end-of-file marker, and which contains at least one non-whitespace non-comment character) in software and uses the COCOMO model for calculating estimations of schedule, effort in man-months, average developers required and total cost of development. 
+								</div>
+</div>
+							<div class="apartado">
+							<div class="cuadro"><b>Important note</b></div>
+								<div>
+ Throughout this site, we are offering only estimations. There are several inaccuracies that make results only valid as an aproximation, being the most important that COCOMO - the model used for calculation schedule, effort and cost estimations - is targeted to proprietary development methods including design, coding, testing, documentation (both for users and for programmers), and a wrap rate for corporate overhead. However, we believe they are accurate enough to draw some conclusions and to compare with other systems as well as to see the evolution of the studied software. You may read the
+<a class="FAQ">FAQ</a>
+for further details. 
+								</div>
+							</div>
+							<div class="apartado">
+							<div class="cuadro"><b>How to use this site</b></div>
+							<div>This site has a clear structure that can be followed easily through its navigation bar at the left hand side of your web browser.
+								<ul>
+								<li><b><i>About</i></b> allows you to deepen into the goals of SLOCCount and the research that is done in the Libre Software field.</li>
+								<li><b><i>Statistics</i></b> is a place where macrostatistics are shown. This includes an ordered list of the used languages as well as an upper bound estimation of effort, scheduling and cost.</li>
+								<li><b><i>Packages</i></b> contains a list of all the (source) packages and their statistics. Packages can be selected to view language and file statistics and effort estimations on them.</li>
+								<li><b><i>Graphs</i></b> links several figures that may help to understand the nature of the software that is being studied.</li> 
+								<li><b><i>FAQ</i></b>: usually you will find here the answers that arise when you look at COCOMO and the numbers and figures it gives. Have a look at it before you contact the site maintainers.
+								<li><b><i>Credits</b></i>: people behind this site and the SLOCCount project.</li>
+								<li>A <b><i>Search</i></b> box allow you to find a given package by its name.</li>
+								<li><b><i>Language</i></b> selection will offer results in your language (if available). If not, and if you would add support for any language you know please FIXME.</li>
+								</ul>
+
+								<center>If you are interested in more results from other libre software projects, visit the <a href="http://libresoft.dat.escet.urjc.es/index.php?menu=Results">libre software engineering research results</a> page.</center>
+							</div>
+							</div>

@@ -1,0 +1,254 @@
+$(document).ready(function() {
+
+function grafica(json,muestras){
+
+json.sort(function(a,b){return a - b})
+var counts = {};
+var count = [];
+var datos = [];
+json.forEach(function(x) { counts[x] = (counts[x] || 0)+1; });
+var i = 0;
+var cuenta = 0;
+
+for (var key in counts){
+		count.push(key);
+		datos.push(counts[key]);
+
+}
+
+crearhist(count,datos);
+}
+
+function graficas(json,muestras){
+/*
+	var counts = [];
+	var count = json.filter(function(x){return x<100000}).length;
+	counts.push(count);
+	var count = json.filter(function(x){return (x<200000 && x>100000)}).length;
+	counts.push(count);
+	var count = json.filter(function(x){return (x<300000 && x>200000)}).length;
+	counts.push(count);
+	var count = json.filter(function(x){return (x<600000 && x>400000)}).length;
+	counts.push(count);
+	var count = json.filter(function(x){return (x<800000 && x>600000)}).length;
+	counts.push(count);
+	var count = json.filter(function(x){return (x<1200000 && x>800000)}).length;
+	counts.push(count);
+	console.log(counts);
+*/
+json.sort(function(a,b){return a - b})
+var counts = {};
+var count = [];
+var datos = [];
+json.forEach(function(x) { counts[x] = (counts[x] || 0)+1; });
+var i = 0;
+var cuenta = 0;
+var ultimokey = 0;
+for (var key in counts){
+	var cuenta = cuenta + counts[key];
+	if (i == muestras ){
+		count.push(">"+ultimokey+"=<"+key);
+		var ultimokey = key;
+		datos.push(cuenta);
+		cuenta= 0;
+		i=0;
+	}
+	i++;
+}
+count.push(">"+ultimokey+"=<"+key);
+datos.push(cuenta);
+console.log(key);
+crearhist(count,datos);
+}
+
+function graficas2(json,muestras){
+/*
+	var counts = [];
+	var count = json.filter(function(x){return x<100000}).length;
+	counts.push(count);
+	var count = json.filter(function(x){return (x<200000 && x>100000)}).length;
+	counts.push(count);
+	var count = json.filter(function(x){return (x<300000 && x>200000)}).length;
+	counts.push(count);
+	var count = json.filter(function(x){return (x<600000 && x>400000)}).length;
+	counts.push(count);
+	var count = json.filter(function(x){return (x<800000 && x>600000)}).length;
+	counts.push(count);
+	var count = json.filter(function(x){return (x<1200000 && x>800000)}).length;
+	counts.push(count);
+	console.log(counts);
+*/
+json.sort(function(a,b){return a - b})
+var counts = {};
+var count = [];
+var datos = [];
+json.forEach(function(x) { counts[x] = (counts[x] || 0)+1; });
+var i = 1;
+var cuenta = 0;
+var ultimokey = 0;
+for (var key in counts){
+	var cuenta = cuenta + counts[key];
+	if (key >= i*muestras ){
+		count.push(">"+ultimokey+"=<"+key);
+		var ultimokey = key;
+		datos.push(cuenta);
+		cuenta= 0;
+		i++;
+	}
+	
+}
+count.push(">"+ultimokey+"=<"+key);
+datos.push(cuenta);
+console.log(key);
+crearhist(count,datos);
+}
+
+function crearhist(datosejex,datosejey){
+var chart = new Highcharts.Chart({
+chart: {
+        renderTo:'showgraphs',
+        defaultSeriesType:'column',
+        borderWidth:0,
+        backgroundColor:'#eee',
+        borderWidth:1,
+        borderColor:'#ccc',
+        plotBackgroundColor:'#fff',
+        plotBorderWidth:1,
+        plotBorderColor:'#ccc'
+    },
+    credits:{enabled:false},
+    exporting:{enabled:false},
+    title:{text:'Histogram Test'},
+    legend:{
+        //enabled:false
+    },
+    tooltip:{
+        borderWidth:1,
+        formatter:function() {
+            return '<b>Range:</b><br/> '+ this.x +'<br/>'+
+            '<b>Count:</b> '+ this.y;
+        }
+    },
+    plotOptions:{
+        column:{
+            shadow:false,
+            borderWidth:.5,
+            borderColor:'#666',
+            pointPadding:0,
+            groupPadding:0,
+            color: 'rgba(204,204,204,.85)'
+        }
+    },
+    xAxis:{
+        categories: datosejex,
+        labels:{
+            rotation:-90,
+            y:40,
+            style: {
+                fontSize:'10px',
+                fontWeight:'normal',
+                color:'#333'
+            },
+        },
+        lineWidth:0,
+        lineColor:'#999',
+        tickLength:70,
+        tickColor:'#ccc',
+    },
+    yAxis:{
+        title:{text:''},
+        //maxPadding:0,
+        gridLineColor:'#e9e9e9',
+        tickWidth:1,
+        tickLength:3,
+        tickColor:'#ccc',
+        lineColor:'#ccc',
+        tickInterval:20,
+        //endOnTick:false,
+    },
+    series: [{
+        name:'Bins',
+        data: datosejey,
+    }]
+});
+
+}
+function crearpie(datos){
+		var suma=0;
+		var datosgraph=[];
+		for (i=2;i<datos.length;i++){
+			var suma =suma + datos[i][1];
+		}
+		for (i=0;i<=3;i++){
+			datosgraph.push(datos[i]);
+			if(i==3){datosgraph.push(["rest",suma]);}			
+		}
+    	// Radialize the colors
+		Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function(color) {
+		    return {
+		        radialGradient: { cx: 0.5, cy: 0.3, r: 0.7 },
+		        stops: [
+		            [0, color],
+		            [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+		        ]
+		    };
+		});
+		
+		// Build the chart
+        $('#showgraphs').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            title: {
+                text: 'Programming Languages'
+            },
+            tooltip: {
+        	    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        color: '#000000',
+                        connectorColor: '#000000',
+                        formatter: function() {
+                            return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
+                        }
+                    }
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Percentage sloc',
+                data: datosgraph
+            }]
+        });
+
+}
+
+		$(document).on('click', '.graphs', function(){ 
+				var namepack = this.id;
+				var name = namepack.split("-");
+				$("#showgraphs").fadeIn("slow", function(){
+						$.ajax({
+								type:'GET',
+								data:{"namepack":namepack},
+								success: function(json) {
+									if (name[1]=="packsloc"){graficas(json,200);}
+									else if (name[1]=="filespack"){graficas(json,15);}
+									else if (name[1]=="slocfile"){graficas(json,50);}
+									else if (name[1]=="langsloc"){crearpie(json);}
+									else if (name[1]=="packsize"){graficas2(json,25000);}
+									else if (name[1]=="numlangpack"){grafica(json,1);}
+								},
+								url: "/graficas"
+						});
+
+				});
+		});
+
+});

@@ -1,0 +1,252 @@
+	<div class="apartado">
+		<div class="cuadro"><b>Frequently Asked Questions</b></div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro"><b>Libre Software</b></div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro"><b>What is <i>Libre Software</i>?</b></div>
+      <div>
+    Through this web site and in our engineering project, we refer to Libre Software as a way of referring both to Free Software and Open Source Software. <i>Libre Software is the European term for free software, a term coined by Richard Stallman to denote the users' freedom to run, copy, distribute, study, change and improve the software. We have chosen to use the word "Libre" over "Free" because it avoids the "free beer" confusion. As Richard Stallman puts it: "Free Software" is a matter of liberty, not price. [...] you should think of "free speech", not "free beer".</i>
+<br>(taken from <a href="http://libre.act-europe.fr/">The Site for Libre Software Developers</a>)
+      </div>
+	</div>
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>What is <i>Libre Software Engineering</i>?</b>
+		</div>
+      <div>
+    Libre software engineering dedicates itself to study libre software development from a software engineering point of view. The main focus is the quantitative measurement of Libre Software development patterns and characteristics in order to gain knowledge on the process, mainly by studying the different agents that participate in it, the use of the different development and development-supporting tools as well as the methods that have been followed.
+      </div>
+  </div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>Is there any other Libre Software Engineering research going on and are there any other results publicly available?</b>
+    </div>
+
+      <div>
+    Yes, there is a web page that <a href="http://libresoft.dat.escet.urjc.es/index.php?menu=Results">lists results and research</a> publicly available on the Internet. There are as well <a href="http://libresoft.dat.escet.urjc.es/index.php?menu=Papers">cientific papers</a> that you may read if you are interested in the topic.
+      </div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>Where can I find more information on <i>Libre Software Engineering</i>?</b>
+    </div>
+
+      <div>
+    Look at the <a href="http://libresoft.dat.escet.urjc.es">Libre Software Engineering</a> site at the Universidad Rey Juan Carlos.
+      </div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>SLOCCount</b>
+		</div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>How does SLOCCount work?</b>
+    </div>
+
+      <div>    
+				<ul>
+				<li>SLOCCount starts by analyzing the source code files, using heuristics to identify the programming languages used in each of them. With this information, and for each package, lists are made including the files written in each language.
+				</li><li>For each file, a parser is run, capable of counting the physical lines of code for the language in which the file is written. With this information, the SLOC count for each file in the package is completed.
+				</li><li>Once the package is completely measured, aggregated figures are compiled, including the SLOC count for each language present in the package, and for the whole package. In addition, statistics for a collection of packages can also be obtained (by package and by language).
+				</li><li> Based on the SLOC counts calculated above, estimations of effort and value, using the COCOMO model, are computed.
+				</li></ul>
+      </div>
+	</div>
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>Where can I get more information about SLOCCount?</b>
+    </div>
+
+      <div>
+    
+Have a look at the <a href="http://www.dwheeler.com/sloccount/">SLOCount project page</a>. There is also some more scientific-oriented information about SLOCCount at the <a href="http://libresoft.dat.escet.urjc.es/index.php?menu=Tools&amp;Tools=SLOCCount">Libre Software Engineering SLOCCount page</a>.
+<br>&nbsp;<br>SLOCCount is included in Debian GNU/Linux.
+      </div>
+	</div>
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>Where can I get more information about sloccount-web?</b>
+      </div>
+
+      <div>
+    Follow the link to the <a href="http://libresoft.dat.escet.urjc.es/index.php?menu=Tools">sloccount-web project page</a>.
+      </div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>COCOMO model</b>
+    </div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>What is the COCOMO model?</b>
+    </div>
+
+      <div>
+    The COCOMO model authored by Barry Boehm in 1981 gives an estimation of the (human and monetary) effort that is needed to build a system as large as the ones we have studied given the number of source lines of code. The <i>classical</i> model used for this estimation assumes in any case a proprietary development method, so it has actually to be taken with care. Anyway, for sure it can give as at least a good idea of the order of magnitude of the effort that has to be invested in case a proprietary development model had been used.
+      </div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>What is a SLOC (source line of code)?</b>
+    </div>
+
+      <div>
+    By definition, a (physical) source line of code is <i>a line ending in a newline or end-of-file marker, and which contains at least one non-whitespace non-comment character</i>.
+      </div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>How does the COCOMO model work?</b>
+    </div>
+
+      <div>
+    
+Given the number of source lines of code (SLOC; KSLOC = thousands of SLOC), the formulas that COCOMO uses are following ones.
+<p><b>Estimated effort</b> (person-months) = 2.4 * KSLOC^1.05
+<br><b>Estimated schedule</b> (months) = 2.5 * (person-months)^0.38
+<br><b>Average developers</b> = effort / schedule
+<br><b>Total cost estimation</b> = effort * schedule * average developer salary
+</p>
+<br>You can read any other details on the estimation model (like the explanation of the different constant factors) in <a href="http://www.computerworld.com/cwi/careers/surveysandreports">Estimating GNU/Linux's size</a> by David A. Wheeler.
+      </div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>How is the total cost estimation done?</b>
+    </div>
+
+      <div>
+    In the calculation of cost estimation the mean salary of full-time system programmers in the year 2000, according to the 2000 salary survey from <a href="http://www.computerworld.com/cwi/careers/surveysandreports">Computer World</a>, has been taken, which was of 56,286 USD per year. The overhead factor used was 2.4. You can see an explanation about this facto and other details on the estimation model in <a href="http://www.computerworld.com/cwi/careers/surveysandreports">Estimating GNU/Linux's size</a> by David A. Wheeler.
+      </div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>What is the difference between physical SLOC and logical SLOC?</b>
+      </div>
+
+      <div>
+    The count of physical lines of code is usually considered as a minimun for estimating the size of a software package. However, this count is in general considerd as worse than logical SLOC (which counts sentences of the programming language used, for instance, terminating semicolons in C). In any case, the decission to measure physical SLOC mandates the selection of COCOMO instead of COCOMO II for effort estimation, since the latter needs as input logical lines of code.
+      </div>
+	</div>
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>Results</b>
+    </div>
+	</div>
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>Are duplicated files counted twice?</b>
+    </div>
+
+      <div>
+    SLOCCount also allows for the use of several mechanisms to improve the counting process.
+For instance, MD5 checksums on each file can be used to identify duplicates within a package or across a collection of packages, or several heuristics can be used to determine that a source file was automatically generated by some tool (and therefore should not be counted as code directly written by a human).
+      </div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>What do you mean with integrated project and multiproject?</b>
+    </div>
+
+      <div>
+    When invoked through "sloccount", the default assumption is that all code is part of a single program; the "--multiproject" option changes this to assume that all top-level components are independently developed programs. When "--multiproject" is invoked, each project's efforts are estimated separately (and then summed), and the schedule estimate presented is the largest estimated schedule of any single component. (text from the <a href="http://www.dwheeler.com/sloccount/sloccount.html">SLOCCount documentation</a>).
+<p>The explanation for this is that the COCOMO model is not linear (it is an exponential function) and summing multiple projects and then applying COCOMO provides a different result as applying COCOMO to each project sepparately and then add all.
+</p><p>Anyway, both results are shown in sloccount-web:
+</p><ul>
+<li>In the <a href="index.php?menu=Statistics">Statistics</a> page the COCOMO model has been applied as if it were a unique project. Figures and numbers are hence higher as they include development and integration of a much bigger piece of software.
+</li><li>At the bottom of the <a href="index.php?menu=Packages">Packages</a> page we become results as with the "--multiproject" SLOCCount option, where all projects are developed in an independent way.
+</li></ul>
+We could assume that the latter case gives the minimum schedule and effort estimations as it does not take into account integration tasks, while the former gives the maximum. In any case, as all the results given by SLOCCount it is important to note that these are only estimations.
+      </div>
+	</div>
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>Why do some languages appear in the results that have not been used?</b>
+    </div>
+
+      <div>
+    Although SLOCCount includes carefully designed heuristics to detect source files to distinguish source lines from comments, and to avoid automatically generated files, those heuristics do not always work as expected. In any case, the error rate is usually very low (far under 1%).
+      </div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>Why are do the results throw so high costs?</b>
+    </div>
+
+      <div>
+    You may be surprised by the high cost estimates, but remember, these include design, coding, testing, documentation (both for users and for programmers), and a wrap rate for corporate overhead (to cover facilities, equipment, accounting, and so on). Many programmers forget these other costs and are shocked by the high figures. If you only wanted to know the costs of the coding, you'd need to get those figures.
+<br>(text taken from the <a href="http://www.dwheeler.com/sloccount/sloccount.html">SLOCCount documentation</a>)
+      </div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>How much money would then correspond to developers?</b>
+    </div>
+
+      <div>
+    If you want to know a subset of this cost, you'll need to isolate just those figures that you're trying to measure. For example, let's say you want to find the money a programmer would receive to do just the coding of the units of the program (ignoring wrap rate, design, testing, integration, and so on). According to Boehm's book (page 65, table 5-2), the percentage varies by product size. For effort, code and unit test takes 42% for small (2 KSLOC), 40% for intermediate (8 KSLOC), 38% for medium (32 KSLOC), and 36% for large (128 KSLOC). Sadly, Boehm doesn't separate coding from unit test; perhaps 50% of the time is spent in unit test in traditional proprietary development (including fixing bugs found from unit test). If you want to know the income to the programmer (instead of cost to the company), you'll also want to remove the wrap rate. Thus, a programmer's income to only write the code for a small program (circa 2 KSLOC) would be 8.75% (42% x 50% x (1/2.4)) of the default figure computed by SLOCCount.
+<br>&nbsp;
+<br>In other words, less than one-tenth of the cost as computed by SLOCCount is what actually would be made by a programmer for a small program for just the coding task. Note that a proprietary commercial company that bid using this lower figure would rapidly go out of business, since this figure ignores the many other costs they have to incur to actually develop working products. Programs don't arrive out of thin air; someone needs to determine what the requirements are, how to design it, and perform at least some testing of it.
+<br>(text taken from the <a href="http://www.dwheeler.com/sloccount/sloccount.html">SLOCCount documentation</a>)
+      </div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>More questions?</b>
+    </div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>What if I've got a question that is not answered here?</b>
+    </div>
+
+      <div>
+    Contact with the sloccount-web author at <a href="grex at gsyc.escet.urjc.es">grex at gsyc.escet.urjc.es</a> and he will put it in the FAQ in next versions of this tool.
+      </div>
+	</div>
+

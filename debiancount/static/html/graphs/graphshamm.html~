@@ -1,0 +1,74 @@
+<div class="apartado">
+	<div id="showgraphs"></div>
+	<div id="graphshamm" class="tablas"><b>General Graphs</b></div>
+		<ul>
+			<li id="ghamm_packsloc" class="graphs">Package size Histogram</li>
+			<li id="ghamm_filespack" class="graphs">Files in packages (Histogram)</li>
+			<li id="ghamm_slocfile" class="graphs">SLOCs/file (Histogram)</li>	
+			<li id="ghamm_langsloc" class="graphs">Language distribution pie (SLOC)</li>	
+			<li id="ghamm_packsize" class="graphs">Package size</li>
+			<li id="ghamm_packsizelog" class="graphs">Package size (logaritmic scale)</li>
+			<li id="ghamm_numlangpack" class="graphs">Number of programming languages in package (histogram)</li>
+			<li id="ghamm_numfilepack" class="graphs">Number of files of the same language by package (histogram)</li>
+		</ul>
+	<div>Histogram for SLOC in files for each programming language</div>
+		<ul>
+			<li id="hammhist_ada" class="graphs">Histogram for ada</li>
+			<li id="hammhist_ansic" class="graphs">Histogram for ansic</li>
+			<li id="hammhist_awk" class="graphs">Histogram for awk</li>
+			<li id="hammhist_cpp" class="graphs">Histogram for cpp</li>
+			<li id="hammhist_cs" class="graphs">Histogram for cs</li>
+			<li id="hammhist_csh" class="graphs">Histogram for csh</li>
+			<li id="hammhist_exp" class="graphs">Histogram for exp</li>
+			<li id="hammhist_fortran" class="graphs">Histogram for fortran</li>
+			<li id="hammhist_java" class="graphs">Histogram for java</li>
+			<li id="hammhist_lex" class="graphs">Histogram for lex</li>
+			<li id="hammhist_lisp" class="graphs">Histogram for lisp</li>
+			<li id="hammhist_makefile" class="graphs">Histogram for makefile</li>
+			<li id="hammhist_ml" class="graphs">Histogram for ml</li>
+			<li id="hammhist_modula3" class="graphs">Histogram for modula3</li>
+			<li id="hammhist_objc" class="graphs">Histogram for objc</li>
+			<li id="hammhist_pascal" class="graphs">Histogram for pascal</li>
+			<li id="hammhist_perl" class="graphs">Histogram for perl</li>
+			<li id="hammhist_php" class="graphs">Histogram for php</li>
+			<li id="hammhist_python" class="graphs">Histogram for python</li>
+			<li id="hammhist_sed" class="graphs">Histogram for sed</li>
+			<li id="hammhist_sh" class="graphs">Histogram for sh</li>
+			<li id="hammhist_sql" class="graphs">Histogram for sql</li>
+			<li id="hammhist_tcl" class="graphs">Histogram for tcl</li>
+			<li id="hammhist_yacc" class="graphs">Histogram for yacc</li>
+		</ul>
+	<div>COCOMO model curves</div>
+	<ul>
+		<li>
+			<b>Projects between 1 and 1000 SLOC</b>
+			<ul>
+				<li id="hammcocomo_1" class="graphs">COCOMO effort estimation curve (in man_month)</li>
+				<li id="hammcocomo_2" class="graphs">COCOMO schedule estimation curve (in months) _ input SLOC</li>
+				<li id="hammcocomo_3" class="graphs">COCOMO schedule estimation curve (in months) _ input effort</li>
+				<li id="hammcocomo_4" class="graphs">COCOMO average developer estimation curve (in man)</li>
+				<li id="hammcocomo_5" class="graphs">COCOMO cost estimation curve (in 1000 USD)</li>
+			</ul>
+		</li>
+		<li>
+			<b>Projects between 1 and 1000 KSLOC</b>
+			<ul>
+				<li id="hammcocomo_1k" class="graphs">COCOMO effort estimation curve (in man_month)</li>
+				<li id="hammcocomo_2k" class="graphs">COCOMO schedule estimation curve (in months) _ input SLOC</li>
+				<li id="hammcocomo_3k" class="graphs">COCOMO schedule estimation curve (in months) _ input effort</li>
+				<li id="hammcocomo_4k" class="graphs">COCOMO average developer estimation curve (in man)</li>
+				<li id="hammcocomo_5k" class="graphs">COCOMO cost estimation curve (in 1000 USD)</li>
+			</ul>
+		</li>
+		<li>
+			<b>Projects between 1 and 1000 MSLOC</b>
+			<ul>
+				<li id="hammcocomo_1M" class="graphs">COCOMO effort estimation curve (in man_month)</li>
+				<li id="hammcocomo_2M" class="graphs">COCOMO schedule estimation curve (in months) _ input SLOC</li>
+				<li id="hammcocomo_3M" class="graphs">COCOMO schedule estimation curve (in months) _ input effort</li>
+				<li id="hammcocomo_4M" class="graphs">COCOMO average developer estimation curve (in man)</li>
+				<li id="hammcocomo_5M" class="graphs">COCOMO cost estimation curve (in 1000 USD)</li>
+			</ul>
+		</li>
+	</ul>
+</div>
