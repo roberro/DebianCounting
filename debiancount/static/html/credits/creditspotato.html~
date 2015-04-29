@@ -1,0 +1,42 @@
+	<div class="apartado">
+		<div class="cuadro">
+      <b>Credits</b>
+		</div>
+	</div>
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>About this site</b>
+		</div>
+		<div>
+    This site about SLOCCount Web for Debian 2.2 (Potato) has been installed, configured and is being held by Gregorio Robles (<a href="mailto:grex at gsyc.escet.urjc.es">grex at gsyc.escet.urjc.es</a>) at GSyC (Universidad Rey Juan Carlos). You may contact him for any questions on this site.
+		</div>
+	</div>
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>Libre Software Engineering at Universidad Rey Juan Carlos</b>
+		</div>
+		<div>
+    This software has been created by members of a research group at GSyC. The research group at GSyC coordinated by Jesús M. González-Barahona is mainly interested in Software Engineering issues regarding libre software development, specially those focused on (quantitative) measurement aspects and developer interaction, and in distributed tools for collaboration in libre software projects. If you wish, you can have more information about their <a href="http://barba.dat.escet.urjc.es">Libre Software Engineering</a>.
+		</div>
+	</div>
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>David A. Wheeler</b>
+		</div>
+		<div>
+    <a href="http://www.dwheeler.com">David A. Wheeler</a> is the original author of SLOCCount. SLOCCount is Open Source Software/Free Software, licensed under the GNU General Public Licence.
+		</div>
+	</div>
+
+
+	<div class="apartado">
+		<div class="cuadro">
+      <b>Others</b>   
+		</div>
+		<div> 
+All Libre Software developers and users, because they make Libre Software possible.
+		</div>
+	</div>
