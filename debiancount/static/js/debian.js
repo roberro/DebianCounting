@@ -38,7 +38,7 @@
 		 	var namevs = namevs.split("(");
 		 	var namevs = namevs[1].split(")");
 		 	var namepack = 	ui.item.label + "_" + namevs[0].toLowerCase();
-			ajaxpackname(namepack);
+			requestpackname = ajaxpackname(namepack);
 		},
 		open: function() {
 			$( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
@@ -227,14 +227,21 @@ function cargaefecto(ident,direccion){
 
 			//Cargamos paginas credits.
 			$(".creditsP").click(function() {
-				if(this.id="#creditshamm"){$(".cabecera").html("SLOCCount Web for Debian 2.0 (Hamm)");}
-				if(this.id="#creditsslink"){$(".cabecera").html("SLOCCount Web for Debian 2.1 (Slink)");}
-				if(this.id="#creditspotato"){$(".cabecera").html("SLOCCount Web for Debian 2.2 (Potato)");}
-				if(this.id="#creditswoody"){$(".cabecera").html("SLOCCount Web for Debian 3.0 (Woody)");}
-				if(this.id="#creditssarge"){$(".cabecera").html("SLOCCount Web for Debian 3.1 (Sarge)");}
-				if(this.id="#creditsetch"){$(".cabecera").html("SLOCCount Web for Debian 4.0 (Etch)");}
-				if(this.id="#creditslenny"){$(".cabecera").html("SLOCCount Web for Debian 5.0 (Lenny)");}
-				cargaefecto( "#Principal" , "/estatico/html/credits.html" );
+				if($(this).attr("id") == "creditshamm"){$(".cabecera").html("SLOCCount Web for Debian 2.0 (Hamm)");
+																	cargaefecto( "#Principal" , "/estatico/html/credits/creditshamm.html" );}
+				if($(this).attr("id") == "creditsslink"){$(".cabecera").html("SLOCCount Web for Debian 2.1 (Slink)");
+																	cargaefecto( "#Principal" , "/estatico/html/credits/creditsslink.html" );}
+				if($(this).attr("id") == "creditspotato"){$(".cabecera").html("SLOCCount Web for Debian 2.2 (Potato)");
+																	cargaefecto( "#Principal" , "/estatico/html/credits/creditspotato.html" );}
+				if($(this).attr("id") == "creditswoody"){$(".cabecera").html("SLOCCount Web for Debian 3.0 (Woody)");
+																	cargaefecto( "#Principal" , "/estatico/html/credits/creditswoody.html" );}
+				if($(this).attr("id") == "creditssarge"){$(".cabecera").html("SLOCCount Web for Debian 3.1 (Sarge)");
+																	cargaefecto( "#Principal" , "/estatico/html/credits/creditssarge.html" );}
+				if($(this).attr("id") == "creditsetch"){$(".cabecera").html("SLOCCount Web for Debian 4.0 (Etch)");
+																	cargaefecto( "#Principal" , "/estatico/html/credits/creditsetch.html" );}
+				if($(this).attr("id") == "creditslenny"){$(".cabecera").html("SLOCCount Web for Debian 5.0 (Lenny)");
+																	cargaefecto( "#Principal" , "/estatico/html/credits/creditslenny.html" );}
+				
  		  });
 
 
@@ -300,7 +307,7 @@ function paquetes(json,nombre,orden){
 		var coste = '<td width="12%" align="center" valign="top">'+ sumacoste +'</td></tr>';
 		var aux = cont + name + version + slocs + files + slocdivpack + personmonth + monthstim + developers + coste;
 		var html = html + aux;
-		html = html + '</tbody></table><div id="dialog"></div></div>';
+		html = html + '</tbody></table></div>';
 
     $("#Principal").html(html);
 }
@@ -312,7 +319,7 @@ function paquetes(json,nombre,orden){
 		if (tipopack == "pack"){
 			paquetes(JSON.parse(requestpack.responseText),nombre,orden);
 		}else if (tipopack == "packnombre"){
-			namepack= this.parentNode.parentNode.parentNode.parentNode.className;
+			namepack= this.parentNode.parentNode.parentNode.parentNode.className;	
 			packnombre(JSON.parse(requestpackname.responseText),namepack,nombre,orden);
 		}else if (tipopack == "packfichero"){
 			namepack= this.parentNode.parentNode.parentNode.parentNode.className;
@@ -331,7 +338,7 @@ function paquetes(json,nombre,orden){
 */
 //tablas de paquetes pinchando nombres.
 function packnombre(json,namepack,nombre,orden){
-		var html = '<div class="apartado"><div class="tablas">Package '+ namepack +'</div><div class="'+ namepack +'"><table class="'+ nombre +'" width="98%" align="center"><tbody class="packnombre"><tr class = "tablas"><td width="10%" align="center" valign="top">#</td><td class="orden" width="15%" align="center" valign="top">Language</td><td class="orden" width="15%" align="center" valign="top">SLOCs</td><td width="15%" align="center" valign="top">%SLOCs</td><td class="orden" width="15%" align="center" valign="top">Files</td><td width="15%" align="center" valign="top">%Files</td><td width="15%" align="center" valign="top">SLOCs/Files</td></tr>';
+		var html = '<div class="apartado"><div class="tablas">Package '+ namepack +'</div><div class="'+ namepack +'"><table class="'+ nombre +'" width="98%" align="center"><tbody class="packnombre"><tr class = "tablas"><td width="10%" align="center" valign="top">#</td><td class="orden" width="15%" title="Order by Language" align="center" valign="top">Language</td><td class="orden" width="15%" title="Order by SLOCs" align="center" valign="top">SLOCs</td><td width="15%" align="center" valign="top">%SLOCs</td><td class="orden" title="Order by Files" width="15%" align="center" valign="top">Files</td><td width="15%" align="center" valign="top">%Files</td><td width="15%" align="center" valign="top">SLOCs/Files</td></tr>';
 		var sumasloc= 0;var sumaporsloc= 0;var sumapack= 0;var sumaporpack= 0;var sumafiles= 0;var sumaporfiles= 0;var sumaslocdivfil = 0;
 		cocomo = json.pop();
 		json = ordenarpor(json,orden);
@@ -382,8 +389,7 @@ function packnombre(json,namepack,nombre,orden){
 			width: 900,
 			heigth: 600,
 
-	});
-	$("#dialog").dialog("open");
+	}).dialog("open");
 }
 		$(document).on('click', '.packname', function(){ 
 				var namepack = this.id;
@@ -414,7 +420,7 @@ function ajaxpackname(namepack){
 function packfiles(json,namepack,nombre,orden){
 	json = ordenarpor(json,orden);
   	var sumasloc = 0;
-	var html = '<div class="apartado"><div class="tablas">Package: '+ namepack +'</div><div class="'+ namepack +'"><table class="'+ nombre +'" width="98%" align="center"><tbody class="packfichero"><tr class="tablas"><td width="12%" align="center" valign="top">Rank</td><td class="orden" width="12%" align="center" valign="top">Filename</td><td class="orden" width="12%" align="center" valign="top">Language</td><td class="orden" width="12%" align="center" valign="top">SLOCs</td></tr>';
+	var html = '<div class="apartado"><div class="tablas">Package: '+ namepack +'</div><div class="'+ namepack +'"><table class="'+ nombre +'" width="98%" align="center"><tbody class="packfichero"><tr class="tablas"><td width="12%" align="center" valign="top">Rank</td><td class="orden" width="12%" title="Order by Nombre" align="center" valign="top">Filename</td><td class="orden" width="12%" title="Order by Language" align="center" valign="top">Language</td><td class="orden" width="12%" title="Order by SLOCs" align="center" valign="top">SLOCs</td></tr>';
 
 	for (i=0;i<json.length;i++){
 			var j = i+1;		
@@ -448,8 +454,7 @@ function packfiles(json,namepack,nombre,orden){
 			heigth: 600,
 			maxWidth: 900,
 		  maxHeight: 900,
-	});
-	$("#dialog").dialog("open");
+	}).dialog("open");
 }
 function ajaxpackfiles(namepack){
 		var name = namepack.split("_");

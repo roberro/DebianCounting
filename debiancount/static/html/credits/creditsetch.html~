@@ -1,11 +1,11 @@
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>Credits</b>
 		</div>
 	</div>
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>About this site</b>
 		</div>
 		<div>
@@ -14,7 +14,7 @@
 	</div>
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>Libre Software Engineering at Universidad Rey Juan Carlos</b>
 		</div>
 		<div>
@@ -23,7 +23,7 @@
 	</div>
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>David A. Wheeler</b>
 		</div>
 		<div>
@@ -33,7 +33,7 @@
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>Others</b>   
 		</div>
 		<div> 

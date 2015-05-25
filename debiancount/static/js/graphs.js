@@ -80,7 +80,6 @@ for (var key in counts){
 	if (key >= i*muestras ){
 		count.push(">"+ultimokey+"=<"+key);
 		var ultimokey = key;
-        if (log==1){cuenta = Math.log10(cuenta)}
 		datos.push(cuenta);
 		cuenta= 0;
 		i++;
@@ -91,10 +90,11 @@ count.push(">"+ultimokey+"=<"+key);
 datos.push(cuenta);
 console.log(key);
 tickintervalo=datos[0]/20;
-crearhist(count,datos,tickintervalo,nombrehist,titulox);
+if (log==1){crearhist(count,datos,undefined,nombrehist,titulox,"logarithmic");}
+else{crearhist(count,datos,tickintervalo,nombrehist,titulox);}
 }
 
-function crearhist(datosejex,datosejey,tickintervalo,nombrehist,titulox){
+function crearhist(datosejex,datosejey,tickintervalo,nombrehist,titulox,logar){
 var chart = new Highcharts.Chart({
 chart: {
         renderTo:'showgraphs',
@@ -155,6 +155,7 @@ chart: {
                 color:'rgb(0,0,0)'
             },
         },
+				type: logar,
         //maxPadding:0,
         gridLineColor:'#e9e9e9',
         tickWidth:1,
@@ -179,7 +180,7 @@ function crearpie(datos){
 		}
 		for (i=0;i<=3;i++){
 			datosgraph.push(datos[i]);
-			if(i==3){datosgraph.push(["rest",suma]);}			
+			if(i==3){datosgraph.push(["other",suma]);}			
 		}
 
 		// Build the chart

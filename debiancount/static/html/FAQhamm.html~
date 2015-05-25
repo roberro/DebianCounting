@@ -1,15 +1,15 @@
 	<div class="apartado">
-		<div class="cuadro"><b>Frequently Asked Questions</b></div>
+		<div class="tablas"><b>Frequently Asked Questions</b></div>
 	</div>
 
 
 	<div class="apartado">
-		<div class="cuadro"><b>Libre Software</b></div>
+		<div class="tablas"><b>Libre Software</b></div>
 	</div>
 
 
 	<div class="apartado">
-		<div class="cuadro"><b>What is <i>Libre Software</i>?</b></div>
+		<div class="tablas"><b>What is <i>Libre Software</i>?</b></div>
       <div>
     Through this web site and in our engineering project, we refer to Libre Software as a way of referring both to Free Software and Open Source Software. <i>Libre Software is the European term for free software, a term coined by Richard Stallman to denote the users' freedom to run, copy, distribute, study, change and improve the software. We have chosen to use the word "Libre" over "Free" because it avoids the "free beer" confusion. As Richard Stallman puts it: "Free Software" is a matter of liberty, not price. [...] you should think of "free speech", not "free beer".</i>
 <br>(taken from <a href="http://libre.act-europe.fr/">The Site for Libre Software Developers</a>)
@@ -17,7 +17,7 @@
 	</div>
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>What is <i>Libre Software Engineering</i>?</b>
 		</div>
       <div>
@@ -27,7 +27,7 @@
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>Is there any other Libre Software Engineering research going on and are there any other results publicly available?</b>
     </div>
 
@@ -38,7 +38,7 @@
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>Where can I find more information on <i>Libre Software Engineering</i>?</b>
     </div>
 
@@ -49,14 +49,14 @@
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>SLOCCount</b>
 		</div>
 	</div>
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>How does SLOCCount work?</b>
     </div>
 
@@ -71,7 +71,7 @@
 	</div>
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>Where can I get more information about SLOCCount?</b>
     </div>
 
@@ -83,7 +83,7 @@ Have a look at the <a href="http://www.dwheeler.com/sloccount/">SLOCount project
 	</div>
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>Where can I get more information about sloccount-web?</b>
       </div>
 
@@ -94,14 +94,14 @@ Have a look at the <a href="http://www.dwheeler.com/sloccount/">SLOCount project
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>COCOMO model</b>
     </div>
 	</div>
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>What is the COCOMO model?</b>
     </div>
 
@@ -112,7 +112,7 @@ Have a look at the <a href="http://www.dwheeler.com/sloccount/">SLOCount project
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>What is a SLOC (source line of code)?</b>
     </div>
 
@@ -123,7 +123,7 @@ Have a look at the <a href="http://www.dwheeler.com/sloccount/">SLOCount project
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>How does the COCOMO model work?</b>
     </div>
 
@@ -141,7 +141,7 @@ Given the number of source lines of code (SLOC; KSLOC = thousands of SLOC), the 
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>How is the total cost estimation done?</b>
     </div>
 
@@ -152,7 +152,7 @@ Given the number of source lines of code (SLOC; KSLOC = thousands of SLOC), the 
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>What is the difference between physical SLOC and logical SLOC?</b>
       </div>
 
@@ -162,13 +162,13 @@ Given the number of source lines of code (SLOC; KSLOC = thousands of SLOC), the 
 	</div>
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>Results</b>
     </div>
 	</div>
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>Are duplicated files counted twice?</b>
     </div>
 
@@ -180,7 +180,7 @@ For instance, MD5 checksums on each file can be used to identify duplicates with
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>What do you mean with integrated project and multiproject?</b>
     </div>
 
@@ -189,15 +189,15 @@ For instance, MD5 checksums on each file can be used to identify duplicates with
 <p>The explanation for this is that the COCOMO model is not linear (it is an exponential function) and summing multiple projects and then applying COCOMO provides a different result as applying COCOMO to each project sepparately and then add all.
 </p><p>Anyway, both results are shown in sloccount-web:
 </p><ul>
-<li>In the <a href="index.php?menu=Statistics">Statistics</a> page the COCOMO model has been applied as if it were a unique project. Figures and numbers are hence higher as they include development and integration of a much bigger piece of software.
-</li><li>At the bottom of the <a href="index.php?menu=Packages">Packages</a> page we become results as with the "--multiproject" SLOCCount option, where all projects are developed in an independent way.
+<li>In the <b>Statistics</b> page the COCOMO model has been applied as if it were a unique project. Figures and numbers are hence higher as they include development and integration of a much bigger piece of software.
+</li><li>At the bottom of the <b>Packages</b> page we become results as with the "--multiproject" SLOCCount option, where all projects are developed in an independent way.
 </li></ul>
 We could assume that the latter case gives the minimum schedule and effort estimations as it does not take into account integration tasks, while the former gives the maximum. In any case, as all the results given by SLOCCount it is important to note that these are only estimations.
       </div>
 	</div>
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>Why do some languages appear in the results that have not been used?</b>
     </div>
 
@@ -208,7 +208,7 @@ We could assume that the latter case gives the minimum schedule and effort estim
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>Why are do the results throw so high costs?</b>
     </div>
 
@@ -220,7 +220,7 @@ We could assume that the latter case gives the minimum schedule and effort estim
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>How much money would then correspond to developers?</b>
     </div>
 
@@ -234,14 +234,14 @@ We could assume that the latter case gives the minimum schedule and effort estim
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>More questions?</b>
     </div>
 	</div>
 
 
 	<div class="apartado">
-		<div class="cuadro">
+		<div class="tablas">
       <b>What if I've got a question that is not answered here?</b>
     </div>
 
